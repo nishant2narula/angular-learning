@@ -1,0 +1,30 @@
+<div class="employee-list">
+    <h2>Employee Directory</h2>
+
+   <div class="employee-row header">
+    <span>Name</span>
+    <span>Role</span>
+    <span>Experience</span>
+  </div>
+
+
+    @for (emp of employees; track emp.id) {
+        <div class="employee-row">
+            <span>{{ emp.name }}</span>
+            <span>{{ emp.role }}</span>
+            <span>{{ emp.yearsOfExperience }}</span>
+            <span>
+                @if (emp.yearsOfExperience>=5) {
+                    <span class="badge-senior">Senior</span>
+                } @else if (emp.yearsOfExperience>=2) {
+                    <span class="badge-mid">Mid-Level</span>
+                }@else {
+                    <span class="badge-junior">Junior</span>
+                }
+            </span>
+        </div>
+    }@empty {
+        <p>No employees found.</p>
+    }
+</div>
+

@@ -1,0 +1,26 @@
+.employee-row {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.employee-row span {
+  min-width: 150px;
+}
+
+.employee-row.header {
+  font-weight: bold;
+  border-bottom: 2px solid #333;
+}
+.badge-senior {
+  background-color: #2e7d32;
+}
+
+.badge-mid {
+  background-color: #f9a825;
+}
+
+.badge-junior {
+  background-color: #757575;
+}
